@@ -155,25 +155,35 @@ button:hover {
     <span class="close" onclick="closeModal('trainings')">&times;</span>
     <h2>Edzések</h2>
 
-    <button class="accordion-btn">Személyi edzés</button>
-    <div class="panel">
+    <!-- Menü gombok az edzésfajtákhoz -->
+    <div id="training-buttons">
+      <button onclick="showTraining('personal')">Személyi edzés</button>
+      <button onclick="showTraining('trx')">TRX</button>
+      <button onclick="showTraining('circuit')">Köredzés</button>
+    </div>
+
+    <!-- Edzés részletek -->
+    <div id="personal" class="training-detail" style="display:none;">
+      <button onclick="showButtons()">← Vissza</button>
+      <h3>Személyi edzés időpontok</h3>
       <p>Hétfő – 18:00 – Szentes</p>
       <p>Szerda – 16:00 – Szentes</p>
     </div>
 
-    <button class="accordion-btn">TRX</button>
-    <div class="panel">
+    <div id="trx" class="training-detail" style="display:none;">
+      <button onclick="showButtons()">← Vissza</button>
+      <h3>TRX időpontok</h3>
       <p>Kedd – 17:00 – Szentes</p>
       <p>Péntek – 18:00 – Szentes</p>
     </div>
 
-    <button class="accordion-btn">Köredzés</button>
-    <div class="panel">
+    <div id="circuit" class="training-detail" style="display:none;">
+      <button onclick="showButtons()">← Vissza</button>
+      <h3>Köredzés időpontok</h3>
       <p>Hétfő – 17:00 – Szentes</p>
       <p>Csütörtök – 18:00 – Szentes</p>
     </div>
 
-    <p><strong>Helyszín:</strong> Szentes</p>
   </div>
 </div>
 
