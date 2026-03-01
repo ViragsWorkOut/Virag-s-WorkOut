@@ -221,14 +221,13 @@ button:hover {
 </div>
 
 <script>
+// Modal funkciók
 function openModal(id) {
     document.getElementById(id).style.display = "block";
 }
-
 function closeModal(id) {
     document.getElementById(id).style.display = "none";
 }
-
 window.onclick = function(event) {
     const modals = document.getElementsByClassName("modal");
     for (let modal of modals) {
@@ -236,6 +235,24 @@ window.onclick = function(event) {
             modal.style.display = "none";
         }
     }
+}
+
+// Tab funkció az Edzésekhez
+function showTraining(id) {
+  document.getElementById('training-buttons').style.display = 'none';
+  const details = document.getElementsByClassName('training-detail');
+  for (let div of details) {
+    div.style.display = 'none';
+  }
+  document.getElementById(id).style.display = 'block';
+}
+
+function showButtons() {
+  document.getElementById('training-buttons').style.display = 'block';
+  const details = document.getElementsByClassName('training-detail');
+  for (let div of details) {
+    div.style.display = 'none';
+  }
 }
 </script>
 
